@@ -1,5 +1,7 @@
 # Machine Gun Nest
 
+- Live site: [https://themachinegunnest.com](https://themachinegunnest.com)
+
 ## List of templates
 
 - [Home](https://kywebdev.com/MGN)
