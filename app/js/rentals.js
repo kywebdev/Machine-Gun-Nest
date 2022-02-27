@@ -67,7 +67,7 @@ rentals["loadCategory"] = function(id, transition=true) {
   }
 
 
-  $(".category-dropdown .dropdown-menu").empty();
+  /*$(".category-dropdown .dropdown-menu").empty();
   for(var i = 0; i<terms.length; i++) {
     if( terms[i].id == id ) {
       rentals.cur_term = terms[i];
@@ -95,7 +95,7 @@ rentals["loadCategory"] = function(id, transition=true) {
     } else {
       $(".category-dropdown .dropdown-menu").append("<a class='dropdown-item' data-id='"+terms[i].id+"'>"+terms[i].name+"</a>");
     }
-  }
+  }*/
 
   // reanimate the gun select view when a different category is selected from the dropdown
   $('.category-dropdown .dropdown-item').on('click', function() {
