@@ -28,7 +28,6 @@ function buildFullpage() {
     normalScrollElements: '.navigation',
     anchors: ['s1', 's2', 's3', 's4', 's5', 's6'],
     scrollingSpeed: 500,
-	responsiveWidth: 900,
     onLeave: function(origin, destination, direction){
       $("#scrollspy a.active").removeClass("active");
     },

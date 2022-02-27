@@ -14,7 +14,7 @@
 <script src="js/mixitup-multifilter.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/picturefill.min.js"></script>
-<script src="js/app.js"></script>
+<script src="dist/app.js"></script>
 <script src="js/rentals.js"></script>
 <script>
   	basePath = "";

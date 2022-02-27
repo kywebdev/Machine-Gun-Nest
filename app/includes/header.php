@@ -28,9 +28,6 @@
                             <a href="services.php">Services</a>
                         </li>
                         <li>
-                            <a href="blog.php">Blog</a>
-                        </li>
-                        <li>
                             <a href="contact.php">Contact</a>
                         </li>
                     </ul>
@@ -62,40 +59,6 @@
                         <li class="bun"></li>
                     </ul>
                 </a>
-            </div>
-            <div class="social">
-                <ul>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/facebook.svg" alt="Facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/tumblr.svg" alt="Tumblr" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/messenger.svg" alt="Facebook Messenger" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/youtube.svg" alt="YouTube" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/linkedin.svg" alt="LinkedIn" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <img src="img/instagram.svg" alt="Instagram" />
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class="search-mobile"></div>

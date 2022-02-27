@@ -57,66 +57,6 @@
 			animation-delay: .75s;
 		}
 	}
-	&.blog {
-		.blog-blurb {
-			animation: h1 .7s cubic-bezier(.25, .75, .5, 1.25);
-			animation-fill-mode: forwards;
-			animation-delay: .3s;
-		}
-		.articles-num {
-			.line-container {
-				span {
-					animation: h1 .7s cubic-bezier(.25, .75, .5, 1.25);
-					animation-fill-mode: forwards;
-					animation-delay: .5s;
-				}
-			}
-		}
-		.list-controls {
-			.display-types {
-				/*&__grid {
-					animation-delay: 2.25s;
-				}
-				&__list {
-					animation-delay: 2.5s;
-				}*/
-				&__grid {
-					animation-delay: 1.75s;
-				}
-				&__list {
-					animation-delay: 1.5s;
-				}
-				.list-controls {
-					.filter-controls {
-						.dropdown {
-							.dropdown-toggle {
-								animation: dropdown-toggle .5s cubic-bezier(.25, .75, .5, 1.25);
-								animation-fill-mode: forwards;
-								animation-delay: 1.75s;
-							}
-						}
-					}
-				}
-			}
-		}
-		.rest-of-page {
-			//animation-delay: 2.5s;
-			animation-delay: 1.75s;
-		}
-	}
-	&.blog-details {
-		.hero-heading {
-			animation: rest-of-page .5s ease-in-out;
-			animation-fill-mode: forwards;
-		}
-		.hero-image {
-			animation: fade-in .75s ease-in-out;
-			animation-fill-mode: forwards;
-		}
-		.rest-of-page {
-			animation-delay: .5s;
-		}
-	}
 	.rest-of-page {
 		animation: rest-of-page .5s ease-in-out;
 		animation-fill-mode: forwards;
@@ -129,7 +69,7 @@
 			animation-delay: .75s;
 		}
 	}
-	.video, .training-hero {
+	.video {
 		h1 {
 			animation: video-h1 .7s ease-in-out;
 			animation-fill-mode: forwards;
@@ -222,11 +162,6 @@
 				&:nth-child(3) {
 					.dropdown-toggle {
 						animation-delay: 1.25s;
-					}
-				}
-				&:nth-child(4) {
-					.dropdown-toggle {
-						animation-delay: 1.5s;
 					}
 				}
 			}
@@ -731,30 +666,12 @@
 							}
 						}
 					}
-					&:nth-child(7) {
-						animation-delay: 1.5s;
-
-						a {
-							&:after {
-								animation-delay: 1.5s;
-							}
-						}
-					}
-					&:nth-child(8) {
-						animation-delay: 1.75s;
-
-						a {
-							&:after {
-								animation-delay: 1.75s;
-							}
-						}
-					}
 				}
 			}
 			.sub-nav {
 				animation: nav-item .5s ease;
 				animation-fill-mode: forwards;
-				animation-delay: 2.25s;
+				animation-delay: 1.75s;
 			}
 		}
 		.contact-area {

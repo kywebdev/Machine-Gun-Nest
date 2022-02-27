@@ -8,7 +8,7 @@ body {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     line-height: 1.15;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     font-family: $avenir;
     color: $black;
     position: relative;
@@ -42,8 +42,10 @@ body {
 				position: relative;
 
 				@media screen and (max-width: $medium) {
-					padding-top: 150px;
-					padding-bottom: 80px;
+					padding-top: 90px;
+				}
+				@media screen and (max-width: $small) {
+					padding-top: 130px;
 				}
 			}
 		}
@@ -290,16 +292,5 @@ svg {
 		@media screen and (max-width: $small) {
 			margin-bottom: -20px;
 		}
-	}
-}
-.fp-enabled {
-	@media screen and (max-width: $medium) {
-		overflow-y: visible !important;
-		overflow-x: hidden !important;
-	}
-}
-#fullpage {
-	@media screen and (max-width: $medium) {
-		display: none;
 	}
 }

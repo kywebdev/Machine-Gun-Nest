@@ -1,5 +1,5 @@
 .select-category {
-    //display: none;
+    display: none;
 }
 .gun-category-slider-container {
     min-height: calc(100vh - (210px + 13.5vh));
@@ -271,31 +271,6 @@
             }
         }
     }
-}
-.discover-mobile {
-	color: $gold;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 16px;
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
-	text-align: center;
-	position: relative;
-	top: -70px;
-	display: none;
-
-	@media screen and (max-width: $medium) {
-		top: 0px;
-		margin-top: 40px;
-	}
-}
-@media (hover: none) {
-	#discover {
-		display: none;
-	}
-	.discover-mobile {
-		display: block;
-	}
 }
 @keyframes gun-category-info-slider {
 	0% {

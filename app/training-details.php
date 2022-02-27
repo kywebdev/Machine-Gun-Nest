@@ -37,21 +37,6 @@
 						</div>
 					</div>
 				</div>
-				<!--<div class="training-hero">
-					<div class="training-hero__img">
-						<picture>
-							<source srcset="img/training-video-poster.jpg" media="(min-width: 551px)">
-							<img src="img/training-video-poster-mobile.jpg" alt="" />
-						</picture>
-					</div>
-					<div class="page-wrapper">
-						<div class="row">
-							<div class="col-md-8 offset-md-2">
-								<h1>Maryland <br />concealed <br/>carry</h1>
-							</div>
-						</div>
-					</div>
-				</div>-->
 			</section>
 			<section class="section dark">
 				<div class="page-wrapper">

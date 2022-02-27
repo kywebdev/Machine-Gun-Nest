@@ -18,7 +18,7 @@ form {
         letter-spacing: -.5px;
         color: $white;
     }
-    .form-control, .ginput_container input, .ginput_container textarea, .membership-form-content select {
+    .form-control, .ginput_container input, .ginput_container textarea {
         height: auto;
         padding: 15px;
         font-size: 16px;
@@ -171,11 +171,7 @@ form {
 	margin-right: -15px;
 }
 .gfield {
-    list-style-type: none;
-
-    &.gfield_visibility_hidden {
-        display: none;
-    }
+	list-style-type: none;
 
 	&.check-group {
 		display: flex;
@@ -232,7 +228,7 @@ form {
 	}
 	input[type="checkbox"], input[type="radio"] {
 		margin-bottom: 8px;
-    }
+	}
 }
 .gform_validation_container {
 	display: none;
@@ -274,4 +270,3 @@ form {
     text-align: center;
     margin-bottom: 30px;
 }
-

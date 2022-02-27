@@ -76,6 +76,23 @@
 					</div>
 				</div>
 			</div>
+			<div class="gun-model-overlay">
+				<div class="page-wrapper">
+					<button class="gun-model-close">
+						<img src="img/close-icon.svg" alt="">
+					</button>
+					<div id="gun-model"></div>
+					<div class="controls">
+						<p>Left-click and drag to rotate. Right-click and drag to pan.</p>
+						<div class="buttons">
+							<button class="btn zoom-out">&ndash;</button>
+							<button class="btn zoom-in">+</button>
+							<button class="btn animate-btn">Stop</button>
+							<button class="btn reset">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div data-remodal-id="search-modal" class="search-modal">
 				<form action="search-results.php">
 					<label for="searchField" class="sr-only">Search for guns</label>

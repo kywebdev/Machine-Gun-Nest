@@ -289,11 +289,11 @@
             margin: 70px 0px 50px;
 
             @media screen and (max-width: $medium) {
-                margin: 30px 0px;
+                margin: -70px 0px 30px;
                 width: 100%;
             }
             @media screen and (max-width: $small) {
-                margin: 20px 0px;
+                margin: -80px 0px 20px;
                 line-height: 30px;
             }
         }
@@ -335,43 +335,23 @@
             display: none;
         }
     }
-    .home-section-3, .home-section-4, .home-section-5, .home-section-6 {
+    .home-section-3, .home-section-4, .home-section-6 {
         h2 {
             font-size: 72px !important;
-            margin: 50px 0px;
-			line-height: 1 !important;
-			
-			@media screen and (max-width: $small) {
+            margin: 50px 0px 100px;
+            line-height: 1 !important;
+
+            @media screen and (max-width: $small) {
                 font-size: 50px !important;
             }
-		}
-		.heading {
+        }
+        .heading {
             text-transform: uppercase;
             font-weight: bold;
             color: $white !important;
         }
-	}
-	.home-section-4 {
-        h2 {
-            margin: 20px 0px 0px;
-
-			@media screen and (max-width: $large) {
-				margin-bottom: 20px;
-			}
-        }
-		p {
-			@media screen and (max-width: $large) {
-				max-width: none !important;
-			}
-		}
-	}
-	.home-section-3 h3 {
-		color: #D1D1D1;
-		line-height: 1.5;
-		margin-bottom: 40px; 
-		font-size: medium;
-	}
-    .home-section-3, .home-section-4 {
+    }
+    .home-section-3 {
         .slick-slide {
             outline: none;
         }
@@ -395,23 +375,11 @@
         }
         .text-right {
             @media screen and (max-width: $medium) {
-                text-align: left !important;
+                text-align: center !important;
             }
         }
-	}
-	.row {
-		+ .event-type-slider {
-			margin-top: 30px;
-		}
-	}
-	.home-section-5 {
-        .btn {
-			@media screen and (max-width: $medium) {
-                margin-bottom: 30px;
-            }
-		}
-	}
-    .home-section-6 {
+    }
+    .home-section-5 {
         .page-wrapper {
             @media screen and (max-width: $medium) {
                 margin: 0px;
@@ -427,7 +395,7 @@
             }
         }
         .retail-text {
-            margin-top: 20px;
+            margin-top: 30px;
             margin-bottom: 60px;
             position: relative;
 

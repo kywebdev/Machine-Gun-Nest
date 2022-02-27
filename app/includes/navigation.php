@@ -8,9 +8,6 @@
                             <li>
                                 <a href="index.php">Home</a>
                             </li>
-							<li>
-                                <a href="blog.php">Blog</a>
-                            </li>
                             <li>
                                 <a href="about.php">About Us</a>
                                 <ul>
@@ -24,9 +21,6 @@
                                         <a href="training.php">TMGN Trainings</a>
                                     </li>
                                 </ul>
-                            </li>
-							<li>
-                                <a href="">Visit Us</a>
                             </li>
                             <li>
                                 <a href="pricing.php">Pricing</a>

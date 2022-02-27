@@ -11,9 +11,8 @@
 .about-intro {
     display: flex;
     align-items: flex-end;
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 60px;
+	margin-bottom: 40px;
+	overflow: hidden;
 
     @media screen and (max-width: $medium) {
         margin-bottom: 30px;
@@ -23,8 +22,7 @@
 		line-height: 24px;
 		transform: translateY(100%);
 		opacity: 0;
-        transition: ease;
-        margin: 15px;
+		transition: ease;
     }
 }
 @keyframes about-intro {
@@ -148,50 +146,6 @@
             object-fit: cover;
         }
     }
-    h1 {
-        color: $white;
-        position: absolute;
-        bottom: 0px;
-        z-index: 1;
-        font-size: 4.4vw;
-        line-height: 4.2vw;
-		margin-bottom: 5vw;
-		opacity: 0;
-		margin-left: -50px;
-		transition: ease;
-
-        @media screen and (max-width: $medium) {
-            font-size: 5vw;
-            line-height: 4.8vw;
-        }
-        @media screen and (max-width: $small) {
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 50px;
-        }
-        @media screen and (max-width: 350px) {
-            font-size: 40px;
-            line-height: 40px;
-            margin-bottom: 40px;
-        }
-    }
-}
-.training-hero {
-	position: relative;
-
-	&__img {
-		overflow: hidden;
-		
-		&:hover {
-			img {
-				transform: scale(1.1);
-			}
-		}
-        img {
-			width: 100%;
-			transition: .8s ease;
-        }
-	}
     h1 {
         color: $white;
         position: absolute;
@@ -566,7 +520,4 @@
             transition: .3s ease-in-out;
         }
     }
-	&__btn {
-		margin-top: 20px;
-	}
 }

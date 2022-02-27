@@ -67,7 +67,6 @@
 												<hr />
 												<p>Maryland’s required 16 hour class for obtaining a concealed carry permit.</p>
 											</a>
-											<a href="" class="btn training-blocks__btn">Enroll</a>
 										</div>
 										<div class="col-md-6 training-blocks__block">
 											<a href="training-details.php">
@@ -77,7 +76,6 @@
 												<hr />
 												<p>Maryland’s required 16 hour class for obtaining a concealed carry permit.</p>
 											</a>
-											<a href="" class="btn training-blocks__btn">Enroll</a>
 										</div>
 										<div class="col-md-6 training-blocks__block">
 											<a href="training-details.php">
@@ -87,7 +85,6 @@
 												<hr />
 												<p>Maryland’s required 16 hour class for obtaining a concealed carry permit.</p>
 											</a>
-											<a href="" class="btn training-blocks__btn">Enroll</a>
 										</div>
 										<div class="col-md-6 training-blocks__block">
 											<a href="training-details.php">
@@ -97,7 +94,6 @@
 												<hr />
 												<p>Maryland’s required 16 hour class for obtaining a concealed carry permit.</p>
 											</a>
-											<a href="" class="btn training-blocks__btn">Enroll</a>
 										</div>
 									</div>
 								</div>

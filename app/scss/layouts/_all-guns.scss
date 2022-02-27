@@ -54,11 +54,6 @@
             display: inline-block;
 			margin-right: 5%;
         
-			&:nth-child(2) {
-				.dropdown-menu {
-					columns: 2;
-				}
-			}
             .dropdown-toggle {
                 font-family: $avenir;
                 font-size: 11px;
@@ -160,7 +155,7 @@
         @media screen and (max-width: $small) {
             width: 100%;
             border-bottom: 1px solid #979797;
-            padding: 15px 0px;
+            padding-bottom: 15px;
             margin-bottom: 20px;
             margin-top: 0px;
         }

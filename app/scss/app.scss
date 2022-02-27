@@ -30,8 +30,6 @@
 @import "layouts/services";
 @import "layouts/contact";
 @import "layouts/error";
-@import "layouts/blog";
-@import "layouts/blog-details";
 
 // components
 @import "components/navigation";
@@ -47,5 +45,3 @@
 
 // helper classes
 @import "common/helpers";
-
-@import "common/extra-styles";
