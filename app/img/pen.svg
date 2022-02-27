@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pen</title>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" transform="translate(-1348.000000, -790.000000)" fill="#0C0C0C" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(1311.000000, 751.000000)">
+                <g id="pen" transform="translate(37.000000, 39.000000)">
+                    <path d="M6.33569393,15.7484941 L2.25203314,11.6657893 L12.1290757,1.79105901 L16.2127364,5.8737638 L6.33569393,15.7484941 Z M1.87031793,12.3849573 L5.61635751,16.1301199 L0,18 L1.87031793,12.3849573 Z M17.4687653,4.62343143 L16.7604524,5.33157854 L12.6713879,1.2434713 L13.3797008,0.535324189 C14.0932013,-0.178441396 15.2502349,-0.178441396 15.9637354,0.535324189 L17.4687653,2.04000179 C18.1770782,2.75571228 18.1770782,3.90793702 17.4687653,4.62343143 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

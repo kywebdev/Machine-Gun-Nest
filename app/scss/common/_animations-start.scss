@@ -1,0 +1,857 @@
+.animations-start {
+	.line-container {
+		span {
+			animation: h1 .7s cubic-bezier(.25, .75, .5, 1.25);
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(2) {
+			span {
+				animation-delay: .25s;
+			}
+		}
+		&:nth-child(3) {
+			span {
+				animation-delay: .5s;
+			}
+		}
+		&:nth-child(4) {
+			span {
+				animation-delay: .75s;
+			}
+		}
+	}
+	&.retail {
+		.offset-text {
+			.line-container {
+				span {
+					animation: h1-backwards .7s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+				}
+				&:nth-child(1) {
+					span {
+						animation-delay: .5s;
+					}
+				}
+				&:nth-child(2) {
+					span {
+						animation-delay: .25s;
+					}
+				}
+			}
+		}
+	}
+	.heading-divider-line {
+		hr {
+			animation: divider-line .5s ease-in-out;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+		}
+	}
+	.intro-text {
+		animation: intro-text .5s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 1.5s;
+	}
+	&.title-only {
+		.rest-of-page {
+			animation-delay: .75s;
+		}
+	}
+	&.blog {
+		.blog-blurb {
+			animation: h1 .7s cubic-bezier(.25, .75, .5, 1.25);
+			animation-fill-mode: forwards;
+			animation-delay: .3s;
+		}
+		.articles-num {
+			.line-container {
+				span {
+					animation: h1 .7s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+					animation-delay: .5s;
+				}
+			}
+		}
+		.list-controls {
+			.display-types {
+				/*&__grid {
+					animation-delay: 2.25s;
+				}
+				&__list {
+					animation-delay: 2.5s;
+				}*/
+				&__grid {
+					animation-delay: 1.75s;
+				}
+				&__list {
+					animation-delay: 1.5s;
+				}
+				.list-controls {
+					.filter-controls {
+						.dropdown {
+							.dropdown-toggle {
+								animation: dropdown-toggle .5s cubic-bezier(.25, .75, .5, 1.25);
+								animation-fill-mode: forwards;
+								animation-delay: 1.75s;
+							}
+						}
+					}
+				}
+			}
+		}
+		.rest-of-page {
+			//animation-delay: 2.5s;
+			animation-delay: 1.75s;
+		}
+	}
+	&.blog-details {
+		.hero-heading {
+			animation: rest-of-page .5s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.hero-image {
+			animation: fade-in .75s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.rest-of-page {
+			animation-delay: .5s;
+		}
+	}
+	.rest-of-page {
+		animation: rest-of-page .5s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 1.75s;
+	}
+	.about-intro {
+		p {
+			animation: about-intro .5s ease-in-out;
+			animation-fill-mode: forwards;
+			animation-delay: .75s;
+		}
+	}
+	.video, .training-hero {
+		h1 {
+			animation: video-h1 .7s ease-in-out;
+			animation-fill-mode: forwards;
+			animation-delay: .25s;
+		}
+	}
+	.retail-blocks {
+		.col-lg-4 {
+			animation: retail-blocks 1s cubic-bezier(.25, .75, .5, 1.25);
+			animation-fill-mode: forwards;
+
+			&:nth-child(1) {
+				animation-delay: 1.25s;
+			}
+			&:nth-child(2) {
+				animation-delay: 1.5s;
+			}
+			&:nth-child(3) {
+				animation-delay: 1.75s;
+			}
+		}
+	}
+	.retail-logo {
+		img {
+			animation: retail-logo .5s ease-in-out;
+			animation-fill-mode: forwards;
+			animation-delay: .75s;
+		}
+	}
+	.contact-phone-numbers, .contact-info {
+		animation: contact .5s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+	&.error404 {
+		.section {
+			.col-md-8 {
+				img {
+					animation: error-img .5s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+		.line-container {
+			&:nth-child(1) {
+				span {
+					animation-delay: 1s;
+				}
+			}
+			&:nth-child(2) {
+				span {
+					animation-delay: 2s;
+				}
+			}
+			&:nth-child(3) {
+				span {
+					animation-delay: 2.25s;
+				}
+			}
+		}
+		.error-msg {
+			a {
+				animation: error-link .5s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				animation-delay: 3s;
+			}
+		}
+	}
+	.list-controls {
+		hr {
+			animation: all-guns-hr .5s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		.filter-controls {
+			.dropdown {
+				.dropdown-toggle {
+					animation: dropdown-toggle .5s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+				}
+				&:nth-child(1) {
+					.dropdown-toggle {
+						animation-delay: .75s;
+					}
+				}
+				&:nth-child(2) {
+					.dropdown-toggle {
+						animation-delay: 1s;
+					}
+				}
+				&:nth-child(3) {
+					.dropdown-toggle {
+						animation-delay: 1.25s;
+					}
+				}
+				&:nth-child(4) {
+					.dropdown-toggle {
+						animation-delay: 1.5s;
+					}
+				}
+			}
+			.reset-filters {
+				animation: dropdown-toggle .5s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				animation-delay: 1.5s;
+			}
+		}
+		.display-types {
+			&__grid {
+				animation: display-types .5s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				animation-delay: 1.75s;
+			}
+			&__list {
+				animation: display-types .5s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				animation-delay: 2s;
+			}
+		}
+	}
+	&.all-guns-page {
+		.rest-of-page {
+			animation: rest-of-page .5s ease-in-out;
+			animation-fill-mode: forwards;
+			animation-delay: 2.25s;
+		}
+	}
+	.results-found {
+		animation: results-found .5s cubic-bezier(.25, .75, .5, 1.25);
+		animation-fill-mode: forwards;
+	}
+	.gun-category-slider {
+		animation: gun-category-slider .7s ease;
+		animation-fill-mode: forwards;
+
+		@media screen and (max-width: $medium) {
+			animation: gun-category-slider-mobile .3s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+	.gun-category-info-slider {
+		animation: gun-category-info-slider .2s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .3s;
+	}
+	&.home {
+		#section1 {
+			&.active.fp-completely {
+				animation: home-sect-1 .7s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+
+
+				.offset-text {
+					.line-container {
+						span {
+							animation: h1-backwards .7s cubic-bezier(.25, .75, .5, 1.25);
+							animation-fill-mode: forwards;
+						}
+						&:nth-child(1) {
+							span {
+								animation-delay: .5s;
+							}
+						}
+						&:nth-child(2) {
+							span {
+								animation-delay: .25s;
+							}
+						}
+					}
+				}
+				.hero__img {
+
+					animation:hero-img-start 0s, hero-img .7s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+					animation-delay:0s, 1.5s;
+				}
+				.hero__text {
+
+					animation:hero-text-start 0s, hero-text .7s cubic-bezier(.25, .75, .5, 1.25);
+					animation-fill-mode: forwards;
+					animation-delay:0s, 1.75s;
+				}
+			}
+		}
+		&.first-load {
+			&.fp-viewing-s1 {
+				header, .about, #scrollspy {
+					animation: header .7s ease;
+					animation-fill-mode: forwards;
+					animation-delay: 1s;
+				}
+			}
+		}
+
+		#section1 {
+			animation: home-sect-1-backwards .7s cubic-bezier(.25, .75, .5, 1.25);
+			animation-fill-mode: forwards;
+
+			.hero__img {
+				animation: hero-img-backwards .7s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				clip-path: inset(0px 0px 0px 0%);
+			}
+			.hero__text {
+				animation: hero-text-backwards .7s cubic-bezier(.25, .75, .5, 1.25);
+				animation-fill-mode: forwards;
+				transform: translateY(0px);
+				opacity: 1;
+			}
+		}
+
+	}
+}
+.select-gun-animate-in {
+	.select-gun {
+		> .row {
+			animation: select-gun-line .5s ease;
+			animation-fill-mode: forwards;
+		}
+	}
+	.category-dropdown {
+		animation: category-dropdown .2s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .3s;
+	}
+	.gun-overview-slider {
+		animation: gun-overview-slider .2s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .5s;
+	}
+	.gun-image-slider {
+		a {
+			animation: gun-select-image .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: .7s;
+		}
+	}
+	.gun-select-slider {
+		animation: gun-select-slider .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .9s;
+
+		@media screen and (max-width: $medium) {
+			animation: gun-select-slider-mobile .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: .9s;
+		}
+		.slick-next {
+			@media screen and (max-width: $medium) {
+				animation: select-gun-arrows .3s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1.2s;
+			}
+		}
+		.slick-prev {
+			@media screen and (max-width: $medium) {
+				animation: select-gun-arrows .3s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1.4s;
+			}
+		}
+	}
+	.gun-image-slider {
+		.slick-next {
+			animation: select-gun-arrows .3s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 1.2s;
+		}
+		.slick-prev {
+			animation: select-gun-arrows .3s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 1.4s;
+		}
+	}
+	.gun-select-slider {
+		a {
+			p {
+				animation: gun-select-slider-text .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1.6s;
+			}
+		}
+		.slick-current {
+			a {
+				p {
+					animation: gun-select-slider-text .5s ease;
+					animation-fill-mode: forwards;
+					animation-delay: 1.9s;
+				}
+			}
+			+ .slick-slide {
+				a {
+					p {
+						animation: gun-select-slider-text .5s ease;
+						animation-fill-mode: forwards;
+						animation-delay: 2.2s;
+					}
+				}
+			}
+		}
+	}
+}
+.select-gun-animate-out {
+	.select-gun {
+		> .row {
+			animation: select-gun-line-fadeout .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+			transform: translateX(0%);
+		}
+	}
+	.category-dropdown {
+		animation: category-dropdown-fadeout .5s ease;
+		animation-fill-mode: forwards;
+		opacity: 1;
+		visibility: visible;
+	}
+	.gun-overview-slider {
+		animation: gun-overview-slider-fadeout .5s ease;
+		animation-fill-mode: forwards;
+		opacity: 1;
+		visibility: visible;
+		top: 0px;
+	}
+	.gun-image-slider {
+		a {
+			animation: gun-select-image-fadeout .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: .2s;
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+		}
+	}
+	#discover {
+		animation: category-dropdown-fadeout .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .2s;
+		opacity: 1;
+		visibility: visible;
+	}
+	.gun-select-slider {
+		animation: gun-select-slider-fadeout .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .5s;
+		transform: translate(0%, -51%);
+
+		@media screen and (max-width: $medium) {
+			animation: gun-select-slider-fadeout-mobile .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: .5s;
+			transform: translate(0%, 0%);
+		}
+		.slick-next {
+			@media screen and (max-width: $medium) {
+				animation: select-gun-arrows-fadeout .5s ease;
+				animation-fill-mode: forwards;
+				opacity: .28;
+				visibility: visible;
+			}
+		}
+		.slick-prev {
+			@media screen and (max-width: $medium) {
+				animation: select-gun-arrows-fadeout .5s ease;
+				animation-fill-mode: forwards;
+				opacity: .28;
+				visibility: visible;
+			}
+		}
+	}
+	.gun-image-slider {
+		.slick-next {
+			animation: select-gun-arrows-fadeout .5s ease;
+			animation-fill-mode: forwards;
+			opacity: .28;
+			visibility: visible;
+		}
+		.slick-prev {
+			animation: select-gun-arrows-fadeout .5s ease;
+			animation-fill-mode: forwards;
+			opacity: .28;
+			visibility: visible;
+		}
+	}
+	.gun-select-slider {
+		a {
+			p {
+				animation: gun-select-slider-text-fadeout .5s ease;
+				animation-fill-mode: forwards;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.slick-current {
+			a {
+				p {
+					animation: gun-select-slider-text-fadeout .5s ease;
+					animation-fill-mode: forwards;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			+ .slick-slide {
+				a {
+					p {
+						animation: gun-select-slider-text-fadeout .5s ease;
+						animation-fill-mode: forwards;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+.gun-details-animate-in {
+	.gun-details-back {
+		animation: gun-details-back .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: 1.75s;
+	}
+	.gun-image {
+		animation: gun-image 1s ease;
+		animation-fill-mode: forwards;
+	}
+	.rotate-btn-container {
+		animation: rotate-btn .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: .5s;
+	}
+	.more-guns-slider {
+		.slide {
+			animation: more-guns-slider 1s ease;
+			animation-fill-mode: forwards !important;
+
+			&.slick-current {
+				animation-delay: .75s;
+
+				+ .slick-slide {
+					animation-delay: 1s;
+
+					+ .slick-slide {
+						animation-delay: 1.25s;
+
+						+ .slick-slide {
+							animation-delay: 1.5s;
+
+							+ .slick-slide {
+								animation-delay: 1.75s;
+							}
+						}
+					}
+				}
+			}
+		}
+		.slick-prev, .slick-next {
+			animation: more-guns-slider-arrows .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 2s;
+
+			@media screen and (max-width: 1300px) {
+				animation-delay: 1.75s;
+			}
+			@media screen and (max-width: 800px) {
+				animation-delay: 1.5s;
+			}
+			@media screen and (max-width: 600px) {
+				animation-delay: 1.25s;
+			}
+			@media screen and (max-width: 450px) {
+				animation-delay: 1s;
+			}
+		}
+	}
+	.gun-description-text {
+		animation: gun-desc-text .5s ease;
+		animation-fill-mode: forwards;
+		animation-delay: 1.75s;
+	}
+	.gun-description {
+		hr {
+			animation: gun-desc-hr .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 1.75s;
+		}
+		.btn {
+			animation: gun-desc-btn .5s ease;
+			animation-fill-mode: forwards;
+			animation-delay: 2.25s;
+		}
+	}
+	.gun-information {
+		&__item {
+			animation: gun-desc-btn .5s ease;
+			animation-fill-mode: forwards;
+
+			&:nth-child(1) {
+				animation-delay: 1.75s;
+			}
+			&:nth-child(2) {
+				animation-delay: 2s;
+			}
+			&:nth-child(3) {
+				animation-delay: 2.25s;
+			}
+		}
+	}
+	.marker-tooltip, .marker-modal {
+		animation: gun-marker .5s ease;
+		animation-fill-mode: forwards;
+
+		&:nth-child(1) {
+			animation-delay: 2.25s;
+		}
+		&:nth-child(2) {
+			animation-delay: 2.4s;
+		}
+		&:nth-child(3) {
+			animation-delay: 2.55s;
+		}
+		&:nth-child(4) {
+			animation-delay: 2.7s;
+		}
+		&:nth-child(5) {
+			animation-delay: 2.85s;
+		}
+		&:nth-child(6) {
+			animation-delay: 3s;
+		}
+		&:nth-child(7) {
+			animation-delay: 3.15s;
+		}
+		&:nth-child(8) {
+			animation-delay: 3.3s;
+		}
+		&:nth-child(9) {
+			animation-delay: 3.45s;
+		}
+		&:nth-child(10) {
+			animation-delay: 3.6s;
+		}
+	}
+}
+.nav-open-animate-in {
+	.navigation {
+		.nav-area {
+			ul {
+				li {
+					animation: nav-item .5s ease;
+					animation-fill-mode: forwards;
+
+					a {
+						&:after {
+							animation: nav-item-line .5s ease;
+							animation-fill-mode: forwards;
+						}
+					}
+					&:nth-child(2) {
+						animation-delay: .25s;
+
+						a {
+							&:after {
+								animation-delay: .25s;
+							}
+						}
+					}
+					&:nth-child(3) {
+						animation-delay: .5s;
+
+						a {
+							&:after {
+								animation-delay: .5s;
+							}
+						}
+					}
+					&:nth-child(4) {
+						animation-delay: .75s;
+
+						a {
+							&:after {
+								animation-delay: .75s;
+							}
+						}
+					}
+					&:nth-child(5) {
+						animation-delay: 1s;
+
+						a {
+							&:after {
+								animation-delay: 1s;
+							}
+						}
+					}
+					&:nth-child(6) {
+						animation-delay: 1.25s;
+
+						a {
+							&:after {
+								animation-delay: 1.25s;
+							}
+						}
+					}
+					&:nth-child(7) {
+						animation-delay: 1.5s;
+
+						a {
+							&:after {
+								animation-delay: 1.5s;
+							}
+						}
+					}
+					&:nth-child(8) {
+						animation-delay: 1.75s;
+
+						a {
+							&:after {
+								animation-delay: 1.75s;
+							}
+						}
+					}
+				}
+			}
+			.sub-nav {
+				animation: nav-item .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 2.25s;
+			}
+		}
+		.contact-area {
+			.about-contact {
+				animation: nav-item 1s ease;
+				animation-fill-mode: forwards;
+				animation-delay: .5s;
+			}
+			.contact-mgn {
+				animation: contact-btn .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1s;
+
+				a {
+					img {
+						animation: nav-item .25s ease;
+						animation-fill-mode: forwards;
+						animation-delay: 1.25s;
+					}
+				}
+			}
+			.social {
+				ul {
+					li {
+						animation: nav-item .35s ease;
+						animation-fill-mode: forwards;
+
+						&:nth-child(1) {
+							animation-delay: 1.25s;
+						}
+						&:nth-child(2) {
+							animation-delay: 1.4s;
+						}
+						&:nth-child(3) {
+							animation-delay: 1.55s;
+						}
+						&:nth-child(4) {
+							animation-delay: 1.7s;
+						}
+						&:nth-child(5) {
+							animation-delay: 1.85s;
+						}
+						&:nth-child(6) {
+							animation-delay: 2s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.nav-open-animate-out {
+	.navigation {
+		.nav-area {
+			ul {
+				li {
+					animation: nav-animate-out .5s ease;
+					animation-fill-mode: forwards;
+					animation-delay: 0s !important;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.sub-nav {
+				animation: nav-animate-out .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 0s !important;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.contact-area {
+			.about-contact {
+				animation: nav-animate-out .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 0s !important;
+				opacity: 1;
+				visibility: visible;
+			}
+			.contact-mgn {
+				animation: nav-btn-animate-out .5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 0s !important;
+				opacity: 1;
+				visibility: visible;
+			}
+			.social {
+				ul {
+					li {
+						animation: nav-animate-out .5s ease;
+						animation-fill-mode: forwards;
+						animation-delay: 0s !important;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}

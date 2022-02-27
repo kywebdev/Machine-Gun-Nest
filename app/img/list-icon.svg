@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>list</title>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.282319568">
+        <g id="rentals-all-grid" transform="translate(-1519.000000, -318.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="list" transform="translate(1519.000000, 318.000000)">
+                <polygon id="Path" points="0 0 3 0 3 3 0 3"></polygon>
+                <polygon id="Path" points="5 0 14 0 14 3 5 3"></polygon>
+                <polygon id="Path" points="0 5 3 5 3 8 0 8"></polygon>
+                <polygon id="Path" points="5 5 14 5 14 8 5 8"></polygon>
+                <polygon id="Path" points="0 10 3 10 3 13 0 13"></polygon>
+                <polygon id="Path" points="5 10 14 10 14 13 5 13"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

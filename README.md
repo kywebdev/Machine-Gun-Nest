@@ -1,1 +1,26 @@
-Machine-Gun-Nest
+# Machine Gun Nest
+
+## List of templates
+
+- [Home](https://pavoneinteractive.com/MGN/templates)
+- [About](http://pavoneinteractive.com/MGN/templates/about.php)
+	- [TMGN Rules](http://pavoneinteractive.com/MGN/templates/rules.php)
+	- [TMGN Trainings](http://pavoneinteractive.com/MGN/templates/training.php)
+		- [Training Details](http://pavoneinteractive.com/MGN/templates/training-details.php)
+- [Pricing](http://pavoneinteractive.com/MGN/templates/pricing.php)
+- [Instruction](http://pavoneinteractive.com/MGN/templates/instruction.php)
+- [Rentals](http://pavoneinteractive.com/MGN/templates/rentals.php)
+	- [All Guns](http://pavoneinteractive.com/MGN/templates/all-guns.php)
+	- [Search Results](http://pavoneinteractive.com/MGN/templates/search-results.php)
+- [Rentals (3D gun view)](http://pavoneinteractive.com/MGN/templates/rentals.php)
+- [Retail](http://pavoneinteractive.com/MGN/templates/retail.php)
+	- [Sales & Transfers](http://pavoneinteractive.com/MGN/templates/sales.php)
+	- [Glock Blue Label Sales](http://pavoneinteractive.com/MGN/templates/glock-blue.php)
+	- [S&W Guardian Program](http://pavoneinteractive.com/MGN/templates/sw-guardian.php)
+- [Services](http://pavoneinteractive.com/MGN/templates/services.php)
+- [Blog](http://pavoneinteractive.com/MGN/templates/blog.php)
+	- [Blog Details](http://pavoneinteractive.com/MGN/templates/blog-details.php)
+	- [Blog Details w/Video](http://pavoneinteractive.com/MGN/templates/blog-details-video.php)
+- [FAQ](http://pavoneinteractive.com/MGN/templates/faq.php)
+- [Contact](http://pavoneinteractive.com/MGN/templates/contact.php)
+- [404](http://pavoneinteractive.com/MGN/templates/404.php)

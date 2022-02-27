@@ -1,0 +1,135 @@
+.accordion {
+    border-top: 1px solid rgba(151, 151, 151, .6);
+    padding-bottom: 50px;
+
+    @media screen and (max-width: $medium) {
+        padding-bottom: 25px;
+    }
+    @media screen and (max-width: $small) {
+        padding-bottom: 0px;
+	}
+    &__item {
+        border-bottom: 1px solid rgba(151, 151, 151, .6);
+
+		&.is-timer-started {
+			.svg-cross__circle {
+				opacity: 1;
+				stroke-dashoffset: 0;
+				transition: stroke-dashoffset 3s linear, opacity .05s;
+			}
+		}
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: $white;
+            font-family: $avenir;
+            font-size: 30px;
+            letter-spacing: -1px;
+            text-align: left;
+            padding: 40px 40px 40px 0px;
+			position: relative;
+
+            @media screen and (max-width: $medium) {
+                font-size: 24px;
+                letter-spacing: -.5px;
+                padding: 35px 40px 35px 0px;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 20px;
+                letter-spacing: 0px;
+                padding: 30px 40px 30px 0px;
+            }
+			&[aria-expanded="true"] {
+                .svg-cross {
+					&__circle {
+						opacity: 0;
+					}
+				}
+				.plus-icon {
+					transform: translateY(-50%) rotate(45deg);
+				}
+			}
+			&:focus {
+				.svg-cross__circle {
+					opacity: 0;
+				}
+			}
+			.plus-icon {
+				position: absolute;
+				right: 0px;
+				top: 50%;
+				transform: translateY(-50%) rotate(0deg);
+				width: 40px;
+				height: 40px;
+				margin-top: 2px;
+				transition: .5s ease;
+
+				p {
+					position: absolute;
+					top: 0px;
+					left: 10px;
+					font-size: 30px;
+					margin-bottom: 0px;
+					width: 40px;
+					height: 40px;
+				}
+			}
+			.svg-cross {
+				width: 40px;
+				height: 40px;
+				position: relative;
+				top: -2px;
+
+				&__circle {
+					opacity: 0;
+					stroke-dasharray: 182.2128;
+					stroke-dashoffset: 182.2128;
+					transition: stroke-dashoffset 1ms .3s, opacity .3s;
+				}
+			}
+        }
+        &__details {
+            > div {
+                padding-bottom: 20px;
+
+                @media screen and (max-width: $medium) {
+                    padding-bottom: 15px;
+                }
+                @media screen and (max-width: $small) {
+                    padding-bottom: 10px;
+                }
+            }
+            p, ul, ol {
+                margin-bottom: 20px;
+                line-height: 24px;
+            }
+            ul, ol {
+                margin-left: 40px;
+            }
+        }
+    }
+}
+.more-questions {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-family: $avenir;
+    letter-spacing: -.5px;
+    margin: 15px 0px 20px;
+    transition: .2s ease-in-out;
+
+    @media screen and (max-width: $medium) {
+        margin: 30px 0px 15px;
+    }
+    @media screen and (max-width: $small) {
+        margin: 50px 0px 5px;
+    }
+    &:hover {
+        opacity: .7;
+    }
+    &:focus {
+        outline: none;
+    }
+}

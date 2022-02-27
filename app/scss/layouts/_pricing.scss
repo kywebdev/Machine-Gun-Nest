@@ -1,0 +1,139 @@
+.pricing, .memberships {
+    .information-blocks {
+        .row {
+            &:nth-of-type(3n+1) {
+                .information-blocks__block {
+                    .heading, p {
+                        color: $blue;
+                    }
+                    hr {
+                        background-color: $blue;
+                    }
+                    .gray-text {
+                        color: $white;
+                    }
+                }
+            }
+            &:nth-of-type(3n+2) {
+                .information-blocks__block {
+                    .heading, p {
+                        color: $gold;
+                    }
+                    hr {
+                        background-color: $gold;
+                    }
+                    .gray-text {
+                        color: $white;
+                    }
+                }
+            }
+            &:nth-of-type(3n+3) {
+                .information-blocks__block {
+                    .heading, p {
+                        color: $green;
+                    }
+                    hr {
+                        background-color: $green;
+                    }
+                    .gray-text {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+.pricing-img-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: $medium) {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    @media screen and (max-width: $small) {
+        margin-bottom: 40px;
+    }
+    .pricing-img {
+		overflow: hidden;
+
+		&:hover {
+			img {
+				transform: scale(1.15);
+			}
+		}
+        img {
+			max-width: 100%;
+			transition: .8s ease;
+        }
+    }
+}
+.pricing-slider {
+    height: calc(100% - 92px);
+    display: flex;
+    align-items: center;
+	
+	@media screen and (max-width: $medium) {
+		height: auto;
+	}
+    h2 {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+        margin-bottom: 50px;
+        font-weight: normal;
+
+        @media screen and (max-width: $medium) {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        @media screen and (max-width: $small) {
+            font-size: 30px;
+            line-height: 38px;
+            margin-bottom: 40px;
+        }
+    }
+    p {
+        line-height: 24px;
+    }
+    .slick-slide {
+        outline: none;
+		margin-bottom: 40px;
+		height: auto;
+    }
+    .slick-prev, .slick-next {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+        opacity: .25;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .slick-prev {
+        right: 40px;
+
+        @media screen and (max-width: $medium) {
+            right: 52%;
+        }
+    }
+    .slick-next {
+        right: 0px;
+
+        @media screen and (max-width: $medium) {
+            right: 36%;
+        }
+    }
+}
+.date-night {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $medium) {
+        margin-bottom: 0px;
+    }
+}

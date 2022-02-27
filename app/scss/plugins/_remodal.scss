@@ -1,0 +1,16 @@
+.remodal-overlay {
+    background-color: rgba(21, 21, 21, .9);
+}
+.remodal-wrapper {
+    cursor: pointer;
+}
+.remodal {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    max-width: 60%;
+
+    @media screen and (max-width: $medium) {
+        max-width: 90%;
+    }
+}

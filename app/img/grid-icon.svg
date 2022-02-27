@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>menu</title>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.28">
+        <g id="rentals-all-list" transform="translate(-1493.000000, -318.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="menu" transform="translate(1493.000000, 318.000000)">
+                <rect id="Rectangle" x="5" y="5" width="3" height="3"></rect>
+                <rect id="Rectangle" x="0" y="0" width="3" height="3"></rect>
+                <rect id="Rectangle" x="5" y="10" width="3" height="3"></rect>
+                <rect id="Rectangle" x="0" y="5" width="3" height="3"></rect>
+                <rect id="Rectangle" x="0" y="10" width="3" height="3"></rect>
+                <rect id="Rectangle" x="10" y="0" width="3" height="3"></rect>
+                <rect id="Rectangle" x="5" y="0" width="3" height="3"></rect>
+                <rect id="Rectangle" x="10" y="5" width="3" height="3"></rect>
+                <rect id="Rectangle" x="10" y="10" width="3" height="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

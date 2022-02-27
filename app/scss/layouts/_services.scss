@@ -1,0 +1,40 @@
+.services {
+    .section {
+        /*> .more-height {
+            min-height: calc(100vh - 210px);
+
+            @media screen and (max-width: $medium) {
+                min-height: auto;
+            }
+        }*/
+	}
+	.intro-text {
+		margin-bottom: 0px;
+
+		h2 {
+			margin-bottom: 0px;
+		}
+	}
+	.about {
+		nav {
+			display: none;
+		}
+	}
+}
+.full-width-img {
+    margin: 50px 0px 100px;
+	overflow: hidden;
+		
+    @media screen and (max-width: $medium) {
+        margin: 0px 0px 50px;
+	}
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+    img {
+		width: 100%;
+		transition: .8s ease;
+    }
+}

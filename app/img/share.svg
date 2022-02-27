@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>share</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blog-detail" transform="translate(-1516.000000, -1210.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(386.000000, 844.000000)">
+                <g id="Group-5" transform="translate(0.000000, 366.000000)">
+                    <g id="Group-2" transform="translate(1.000000, 0.000000)">
+                        <g id="share" transform="translate(1129.000000, 0.000000)">
+                            <path d="M16,7.49491805 L9.350708,0 L9.350708,4.47160389 L7.93701172,4.47160389 C3.55346681,4.47160389 0,8.12432553 0,12.6303109 L0,15 L0.627929688,14.2926695 C2.76281738,11.8882225 5.78356934,10.5182322 8.95056153,10.5182322 L9.350708,10.5182322 L9.350708,14.9898361 L16,7.49491805 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

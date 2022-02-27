@@ -1,0 +1,503 @@
+.select-gun {
+    display: none;
+    min-height: calc(100vh - (210px + 13.5vh));
+    position: relative;
+
+    > .row {
+        min-height: calc(100vh - (210px + 13.5vh));
+        background-image: url('../img/line.png');
+        background-repeat: repeat-x;
+		background-position: center 39.7%;
+		transform: translateX(-100%);
+
+        @media screen and (max-width: $medium) {
+            min-height: auto;
+            background-position: center 110px;
+        }
+        .col-md-2 {
+            flex: 0 0 calc(16.66667% + 5%);
+            max-width: calc(16.66667% + 5%);
+            position: relative;
+
+            @media screen and (max-width: $medium) {
+                flex: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    .col-md-10 {
+        flex: 0 0 calc(83.33333% - 5%);
+        max-width: calc(83.33333% - 5%);
+        position: relative;
+
+        @media screen and (max-width: $medium) {
+            flex: auto;
+            max-width: 100%;
+        }
+    }
+}
+@keyframes select-gun-line {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes select-gun-line-fadeout {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+.gun-select-slider {
+    position: absolute;
+    top: 40%;
+    transform: translate(-100%, -51%);
+
+    @media screen and (max-width: $medium) {
+        position: relative;
+		top: auto;
+		transform: translate(-100%, 0%);
+    }
+    .slick-current {
+        a {
+            background-color: rgba(30, 30, 30, .64);
+            opacity: 1;
+            border-top: 1px solid #3F3F3F;
+            border-left: 1px solid #161616;
+            border-right: 1px solid #161616;
+            border-bottom: 1px solid #1b1b1b;
+        }
+    }
+    .slick-list {
+        padding: 0px !important;
+        height: 222px !important;
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 68px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+		@media screen and (max-width: $medium) {
+			opacity: 0;
+			visibility: hidden;
+		}
+        img {
+            @media screen and (max-width: $medium) {
+                position: absolute;
+                right: 5%;
+                opacity: .28;
+                transform: rotate(90deg);
+                transition: .2s ease-in-out;
+            }
+            &:hover {
+                @media screen and (max-width: $medium) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .slick-prev {
+        top: 4px;
+
+        img {
+            @media screen and (max-width: $medium) {
+                bottom: 0px;
+            }
+        }
+    }
+    .slick-next {
+        bottom: -2px;
+
+        @media screen and (max-width: $medium) {
+            bottom: 4px;
+        }
+        img {
+            @media screen and (max-width: $medium) {
+                top: 0px;
+            }
+        }
+    }
+    .slick-slide {
+        height: 74px;
+        width: 100% !important;
+    }
+    a {
+        display: block;
+        color: #CACACA;
+        opacity: .58;
+        text-decoration: none;
+        padding: 25px 0px 25px 25%;
+        outline: none;
+        border: transparent;
+        transition: .3s ease-in-out;
+
+        @media screen and (max-width: $medium) {
+            padding-left: 5%;
+            max-width: 70%;
+        }
+        p {
+            margin-bottom: 0px;
+            font-size: 18px;
+            font-weight: 500;
+			text-transform: uppercase;
+			opacity: 0;
+			visibility: hidden;
+        }
+    }
+}
+@keyframes gun-select-slider {
+	0% {
+		transform: translate(-100%, -51%);
+	}
+	100% {
+		transform: translate(0%, -51%);
+	}
+}
+@keyframes gun-select-slider-mobile {
+	0% {
+		transform: translate(-100%, 0%);
+	}
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+@keyframes gun-select-slider-fadeout {
+	0% {
+		transform: translate(0%, -51%);
+	}
+	99% {
+		transform: translate(-100%, -51%);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes gun-select-slider-fadeout-mobile {
+	0% {
+		transform: translate(0%, 0%);
+	}
+	99% {
+		transform: translate(-100%, 0%);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes gun-select-slider-text {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes gun-select-slider-text-fadeout {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.gun-image-slider {
+    text-align: center;
+    padding-right: 27%;
+    top: calc(50% - 30px);
+    transform: translateY(-50%);
+
+    @media screen and (max-height: 625px) {
+        top: auto;
+        transform: none;
+    }
+    @media screen and (max-width: $medium) {
+        top: auto;
+        transform: none;
+        padding: 0px 5%;
+        margin-top: 30px;
+    }
+    .slick-list {
+        overflow: visible;
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        right: 5%;
+        transform: translateY(-50%);
+        outline: none;
+        background-color: transparent;
+        border: none;
+        transition: .2s ease-in-out;
+        z-index: 1;
+        padding: 0px;
+		transform: rotate(90deg);
+		opacity: 0;
+		visibility: hidden;
+
+        &:hover {
+            img {
+				opacity: 1;
+			}
+		}
+		img {
+			opacity: .28;
+			transition: .2s ease-in-out;
+		}
+    }
+    .slick-prev {
+        top: calc(50% - 83px);
+    }
+    .slick-next {
+        top: 50%;
+    }
+    a {
+      	cursor: pointer;
+        display: inline-block;
+        outline: none;
+        color: $gold;
+        text-decoration: none;
+        position: relative;
+		max-width: 900px;
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(1.3);
+
+		&:hover {
+			p {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		p {
+			color: $gold;
+		}
+        img {
+            width: 100%;
+        }
+    }
+}
+@keyframes gun-select-image {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(1.3);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+@keyframes gun-select-image-fadeout {
+	0% {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(1.3);
+	}
+}
+@keyframes select-gun-arrows {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes select-gun-arrows-fadeout {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.gun-overview-slider {
+    width: 100%;
+	margin-top: -53px;
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	top: 10px;
+
+    @media screen and (max-height: 700px) {
+        margin-top: 0px;
+    }
+    @media screen and (max-width: $medium) {
+        margin-top: 10px;
+    }
+    .slick-slide {
+        outline: none;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: -.5px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $medium) {
+            font-size: 21px;
+        }
+    }
+    p {
+        opacity: .62;
+        line-height: 22px;
+    }
+}
+@keyframes gun-overview-slider {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		top: 10px;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		top: 0px;
+	}
+}
+@keyframes gun-overview-slider-fadeout {
+	0% {
+		opacity: 1;
+		visibility: visible;
+		top: 0px;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		top: 10px;
+	}
+}
+.category-dropdown {
+	text-align: right;
+	opacity: 0;
+	visibility: hidden;
+
+    .dropdown-toggle {
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: .64;
+        position: relative;
+        cursor: pointer;
+        padding-right: 15px;
+        display: block;
+        color: $white;
+        text-decoration: none;
+        outline: transparent;
+
+        &:after {
+            content: '';
+            width: 7px;
+            height: 4px;
+            background-image: url('../img/dropdown-arrow-white.svg');
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            top: 4px;
+            right: 0px;
+            border: none;
+        }
+    }
+    .dropdown-menu {
+        background-color: rgba($dark-gray, .5);
+        border: none;
+        min-width: 90px;
+        margin: .35rem 0px;
+        border-radius: 0px;
+        border-top: 1px solid #3F3F3F;
+        border-left: 1px solid #222222;
+        border-right: 1px solid #222222;
+        border-bottom: 1px solid #222222;
+    }
+    .dropdown-item {
+		font-family: $avenir;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: .64;
+        color: $white;
+        padding: .25rem .75rem;
+		transition: .1s ease-in-out;
+		cursor: pointer;
+
+        &:hover, &:focus {
+            color: $gold;
+            background-color: transparent;
+        }
+    }
+}
+@keyframes category-dropdown {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes category-dropdown-fadeout {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.category-dropdown-mobile {
+    padding: 0px 5%;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.select-gun > .row {
+		height: calc(100vh - (210px + 13.5vh));
+	}
+}
+#discover {
+	position: absolute;
+	pointer-events: none;
+	
+	p {
+		color: $gold;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s ease-in-out;
+	}
+	&.is-visible {
+		p {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

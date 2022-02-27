@@ -1,0 +1,106 @@
+.search-modal {
+    form {
+        position: relative;
+    }
+    input {
+        background-color: transparent !important;
+        height: auto !important;
+        padding: 10px 80px 10px 0px !important;
+        font-family: $avenir !important;
+		font-size: 3.75vw !important;
+        font-weight: normal !important;
+        line-height: 4.7vw;
+        color: $white !important;
+        border: none !important;
+        border-bottom: 2px solid $white !important;
+        border-radius: 0px !important;
+        letter-spacing: -2px;
+
+        @media screen and (max-width: $medium) {
+            padding: 10px 50px 10px 0px !important;
+            font-size: 40px !important;
+            line-height: 55px !important;
+            letter-spacing: -1px;
+        }
+        @media screen and (max-width: $small) {
+            padding: 10px 40px 10px 0px !important;
+            font-size: 30px !important;
+            line-height: 45px;
+        }
+        &:focus {
+            color: $white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $white;
+            box-shadow: none;
+        }
+        &::placeholder { 
+            color: $white !important;
+			font-weight: normal !important;
+			font-style: normal !important;
+            font-size: 3.75vw !important;
+            text-transform: none !important;
+            letter-spacing: -2px !important;
+
+            @media screen and (max-width: $medium) {
+                font-size: 40px !important;
+                letter-spacing: -1px;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 30px !important;
+            }
+        }
+        &:-ms-input-placeholder {
+            color: $white !important;
+			font-weight: normal !important;
+			font-style: normal !important;
+            font-size: 3.75vw !important;
+            text-transform: none !important;
+            letter-spacing: -2px !important;
+
+            @media screen and (max-width: $medium) {
+                font-size: 40px !important;
+                letter-spacing: -1px;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 30px !important;
+            }
+        }
+        &::-ms-input-placeholder {
+            color: $white !important;
+			font-weight: normal !important;
+			font-style: normal !important;
+            font-size: 3.75vw !important;
+            text-transform: none !important;
+            letter-spacing: -2px !important;
+
+            @media screen and (max-width: $medium) {
+                font-size: 40px !important;
+                letter-spacing: -1px;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 30px !important;
+            }
+        }
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+
+        img {
+            width: 2.8vw;
+
+            @media screen and (max-width: $medium) {
+                width: 35px;
+            }
+            @media screen and (max-width: $small) {
+                width: 25px;
+            }
+        }
+    }
+}

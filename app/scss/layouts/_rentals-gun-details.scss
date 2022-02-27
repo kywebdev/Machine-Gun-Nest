@@ -1,0 +1,753 @@
+.gun-details {
+    display: none;
+
+    .col-md-2 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+		.rotate-btn-container {
+			opacity: 0;
+			visibility: hidden;
+		}
+        .rotate-btn {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            opacity: .3;
+			transition: .2s ease-in-out;
+
+            @media screen and (max-width: $medium) {
+                display: none;
+            }
+            &.is-on {
+                opacity: 1;
+            }
+            &.is-off {
+                opacity: .3;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+	}
+	&-back {
+		opacity: 0;
+		visibility: hidden;
+		position: relative;
+		z-index: 1;
+
+		a {
+			font-weight: bold;
+			font-size: 11px;
+			text-transform: uppercase;
+			color: #ffffff;
+			letter-spacing: 1px;
+			opacity: .64;
+			transition: .3s ease;
+
+			@media screen and (max-width: $medium) {
+				margin-bottom: 20px;
+				display: block;
+			}
+			&:hover {
+				opacity: 1;
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+    .gun-image {
+        position: relative;
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(.7);
+		padding: 60px 0px;
+
+		@media screen and (max-width: $medium) {
+			padding: 20px 0px;
+		}
+
+      .gun-image-holder {
+			perspective: 25px;
+			text-align: center;
+		}
+        + .row {
+            margin-top: -3.5vw;
+
+            @media screen and (max-width: $large) {
+                margin-top: 0px;
+            }
+        }
+        img {
+            max-width: 100%;
+            transition: transform 0.5s;
+            -webkit-transition: transform 0.5s;
+            -moz-transition: transform 0.5s;
+            -o-transition: transform 0.5s;
+        }
+        &__marker {
+            position: absolute;
+            z-index: 2;
+            width: 25px;
+            height: 25px;
+            border: 2px solid #E1E1E1;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color: transparent;
+            outline: none;
+            opacity: .7;
+			padding: 0px;
+			transform: scale(0);
+
+            @media screen and (max-width: $medium) {
+                width: 20px;
+                height: 20px;
+            }
+            &:after {
+                content: '';
+                display: none;
+                width: 9px;
+                height: 9px;
+                background-color: $gold;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                border-radius: 50%;
+
+                @media screen and (max-width: $medium) {
+                    width: 6px;
+                    height: 6px;
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+            &:hover, &:focus, &.show-dot {
+                &:after {
+                    display: block;
+                }
+            }
+            &:focus {
+                &:after {
+                    @media screen and (max-width: $medium) {
+                        display: none;
+                    }
+                }
+            }
+            &.marker-tooltip {
+                @media screen and (max-width: $medium) {
+                    display: none;
+                }
+            }
+            &.marker-modal {
+                display: none;
+
+                @media screen and (max-width: $medium) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .gun-description {
+		&-text {
+			opacity: 0;
+			visibility: hidden;
+		}
+        h2 {
+            font-size: 24px;
+            line-height: 33px;
+            max-width: 400px;
+			margin-bottom: 10px;
+
+            @media screen and (max-width: $medium) {
+                max-width: none;
+            }
+            @media screen and (max-width: $small) {
+                margin-top: 10px;
+            }
+		}
+		hr {
+			width: 0%;
+			margin: 0px;
+			opacity: .55;
+		}
+        p {
+            max-width: 400px;
+            opacity: .55;
+            font-size: 12px;
+            line-height: 16px;
+            padding-top: 15px;
+			color: #c5c5c5;
+
+            @media screen and (max-width: $medium) {
+                font-size: 14px;
+                line-height: 19px;
+                max-width: none;
+            }
+            + .btn {
+				margin-top: 30px;
+
+                @media screen and (max-width: $medium) {
+                    margin-top: 10px;
+                }
+            }
+		}
+		.btn {
+			opacity: 0;
+			visibility: hidden;
+		}
+    }
+    .gun-information {
+        &__item {
+            background-color: rgba(34, 34, 34, .64);
+            border-top: 1px solid #3F3F3F;
+            border-left: 1px solid #161616;
+            border-right: 1px solid #161616;
+            border-bottom: 1px solid #1b1b1b;
+			margin-bottom: 15px;
+			opacity: 0;
+			visibility: hidden;
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: #CACACA;
+                font-family: $avenir;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 18px 30px 18px 20px;
+                width: 100%;
+                outline: none;
+                text-align: left;
+                position: relative;
+
+                &:after {
+                    content: '+';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    font-family: $avenir;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                &[aria-expanded="true"] {
+                    &:after {
+                        content: '—';
+                    }
+                }
+            }
+            &__details {
+                > div {
+                    padding: 0px 20px 18px;
+                }
+                p {
+                    font-size: 13px;
+                    line-height: 17px;
+                    color: #CACACA;
+
+                    @media screen and (max-width: $medium) {
+                        font-size: 14px;
+                        line-height: 19px;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .more-guns-slider {
+        margin-top: 25px;
+        margin-bottom: -25px;
+
+        @media screen and (max-width: $medium) {
+            margin-left: 45px;
+            margin-right: 45px;
+        }
+        .slick-slide {
+			margin: 10px;
+			opacity: 0;
+			visibility: hidden;
+        }
+        .slick-list {
+            margin: 0px -10px;
+        }
+        .slick-prev, .slick-next {
+            outline: none;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: .25;
+			transition: .2s ease-in-out;
+			visibility: hidden;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .slick-prev {
+            left: -50px;
+        }
+        .slick-next {
+            right: -50px;
+        }
+        .active-slide {
+            .gun-btn {
+                background-color: rgba(26, 26, 26, .64);
+                text-decoration: none;
+                outline: 2px solid $gold !important;
+                border: 1px solid $gold;
+                box-shadow: inset 0px 0px 6px $gold, 0px 0px 8px $gold, 0px 3px 6px #1d1d1d;
+
+                &:after {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+                span {
+                    opacity: 1;
+                    color: $gold;
+                }
+            }
+        }
+    }
+}
+@keyframes rotate-btn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes gun-details-back {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes gun-image {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(.7);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+@keyframes more-guns-slider {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes more-guns-slider-arrows {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: .25;
+		visibility: visible;
+	}
+}
+@keyframes gun-desc-text {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes gun-desc-hr {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes gun-desc-btn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes gun-marker {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.gun-btn {
+    background-color: rgba(34, 34, 34, .64);
+    border-top: 1px solid #3F3F3F;
+    border-left: 1px solid #161616;
+    border-right: 1px solid #161616;
+    border-bottom: 1px solid #1b1b1b;
+    outline: 2px solid transparent !important;
+    display: block;
+    padding: 20px 15px 10px;
+	position: relative;
+	cursor: pointer;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background-color: rgba(26, 26, 26, .64);
+        text-decoration: none;
+        outline: 2px solid $gold !important;
+        border: 1px solid $gold;
+        box-shadow: inset 0px 0px 6px $gold, 0px 0px 8px $gold, 0px 3px 6px #1d1d1d;
+
+        span {
+            opacity: 1;
+            color: $gold;
+        }
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: $gold;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: .3s ease-in-out;
+    }
+    .gun-img {
+        height: 60px;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    img {
+        display: block;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 150px;
+    }
+    span {
+        color: #CACACA;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        display: block;
+        margin-top: 5px;
+        text-transform: uppercase;
+        opacity: .64;
+        transition: .2s ease-in-out;
+    }
+    .gun-btn-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .price {
+        color: #CACACA;
+        opacity: 1;
+        margin-left: 10px;
+    }
+}
+.tooltip {
+    left: 90px !important;
+
+    .arrow {
+        display: none;
+    }
+    .tooltip-inner {
+        background: rgba(34, 34, 34, .8);
+        padding: 15px;
+        border-top: 1px solid #3F3F3F;
+        border-left: 1px solid #161616;
+        border-right: 1px solid #161616;
+        border-bottom: 1px solid #1b1b1b;
+        border-radius: 0px;
+        text-align: left;
+
+        span {
+            color: #CACACA;
+            font-family: $avenir;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+        p {
+            color: #CACACA;
+            font-family: $avenir;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0px;
+        }
+    }
+}
+.gun-video-overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999999;
+    background-color: $dark-gray;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .page-wrapper {
+        height: 100vh;
+    }
+    .row {
+        height: 100%;
+    }
+    .col-md-10 {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 700px) {
+            padding: 0px;
+        }
+    }
+    .gun-video {
+        width: 100%;
+        padding: 50px 0px;
+
+        @media screen and (max-width: 700px) {
+            padding: 0px;
+        }
+        .player {
+            position: relative;
+
+            .video-fullscreen {
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                padding: 10px;
+                outline: none;
+
+                @media screen and (max-width: 700px) {
+                    top: 10px;
+                    left: 10px;
+                }
+                &:hover {
+                    img {
+                        transform: scale(.8);
+
+                        @media screen and (max-width: 700px) {
+                            transform: scale(.7);
+                        }
+                    }
+                }
+                img {
+                    transform: scale(1);
+                    transition: .1s ease-in-out;
+
+                    @media screen and (max-width: 700px) {
+                        transform: scale(.8);
+                    }
+                }
+            }
+            .video-close {
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                padding: 10px;
+                outline: none;
+
+                @media screen and (max-width: 700px) {
+                    top: 10px;
+                    right: 10px;
+                }
+                &:hover {
+                    img {
+                        transform: scale(.8);
+
+                        @media screen and (max-width: 700px) {
+                            transform: scale(.7);
+                        }
+                    }
+                }
+                img {
+                    transform: scale(1);
+                    transition: .1s ease-in-out;
+
+                    @media screen and (max-width: 700px) {
+                        transform: scale(.8);
+                    }
+                }
+            }
+            .pause-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                opacity: 0;
+                visibility: hidden;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+
+                        @media screen and (max-width: 700px) {
+                            transform: scale(1);
+                        }
+                    }
+                }
+                &.is-visible {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &.is-hidden {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                img {
+                    transform: scale(1);
+                    transition: .1s ease-in-out;
+
+                    @media screen and (max-width: 700px) {
+                        transform: scale(.8);
+                    }
+                }
+            }
+        }
+    }
+}
+.show-gun-details {
+    .select-category {
+        display: none;
+    }
+    .gun-details {
+        display: block;
+    }
+}
+.marker-modal {
+    z-index: 999999;
+	background-color: rgba(21, 21, 21, .9);
+	padding-right: 15px;
+	padding-left: 15px;
+	height: calc(100% + 10rem);
+
+    .modal-content {
+        background-color: rgba(34, 34, 34, .64);
+        border-radius: 0px;
+        padding: 20px;
+        border-top: 1px solid #3F3F3F;
+        border-left: 1px solid #161616;
+        border-right: 1px solid #161616;
+        border-bottom: 1px solid #1b1b1b;
+    }
+    .modal-header {
+        padding: 0px;
+        border-bottom: none;
+
+        .close {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            margin: -10px -10px 0px 0px;
+            position: relative;
+            opacity: 1;
+            outline: none;
+
+            &:hover {
+                opacity: 1;
+            }
+            img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    .modal-title {
+        color: #CACACA;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .modal-body {
+        padding: 0px;
+
+        p {
+            color: #CACACA;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0px;
+        }
+    }
+}
+.modal-dialog-centered {
+	min-height: 100vh;
+}
+.modal-open {
+	.modal-backdrop {
+		display: none;
+		opacity: 0;
+		z-index: 0;
+	}
+}
+.marker-tooltip-container, .marker-modal-container {
+	width: 100%;
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@media screen and (max-width: $medium) {
+		top: 20px;
+	}
+}
+.marker-modal-container {
+	display: none;
+
+	@media screen and (max-width: $medium) {
+		display: block;
+	}
+}
+.marker-tooltip-container {
+	@media screen and (max-width: $medium) {
+		display: none;
+	}
+}

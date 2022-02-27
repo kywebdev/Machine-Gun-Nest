@@ -1,0 +1,145 @@
+.error404 {
+    .section {
+        padding-bottom: 0px !important;
+
+        @media screen and (max-width: $medium) {
+            min-height: 730px;
+        }
+        @media screen and (max-width: $small) {
+            min-height: 600px;
+        }
+        .page-wrapper {
+            height: calc(100vh - 210px);
+
+            @media screen and (max-width: $medium) {
+                height: calc(100vh - 150px);
+            }
+            .row {
+                height: 100%;
+            }
+        }
+        .col-md-8 {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+    
+            @media screen and (max-width: $medium) {
+                display: block;
+                min-height: 580px;
+            }
+            @media screen and (max-width: $small) {
+                min-height: 450px;
+            }
+            .error-img {
+                width: 100%;
+                max-width: 959px;
+				margin: 0px auto;
+    
+                @media screen and (max-width: $medium) {
+                    width: 100%;
+                    max-width: 500px;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @media screen and (max-width: 350px) {
+                    max-width: 400px;
+				}
+				img {
+					width: 100%;
+					display: block;
+					pointer-events: none;
+					transform: scale(1.5);
+					opacity: 0;
+					margin-bottom: -15px;
+				}
+            }
+        }
+    }
+    .error-msg {
+        position: absolute;
+        bottom: 10.6vh;
+
+        @media screen and (max-width: $medium) {
+            position: relative;
+            bottom: auto;
+            width: 100%;
+            z-index: 1;
+        }
+        h2 {
+            font-size: 2.5vw;
+            line-height: 3.05vw;
+            font-weight: normal;
+			margin-bottom: 35px;
+
+            @media screen and (min-width: 1921px) {
+                font-size: 48px;
+                line-height: 52px;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 48px;
+                line-height: 58px;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 30px;
+                line-height: 37px;
+                margin-bottom: 20px;
+			}
+			.line-container {
+				overflow: hidden;
+
+				span {
+					transform: translateY(100%);
+					transition: .7s cubic-bezier(.25, .75, .5, 1.25);
+					margin-top: -.4vw;
+					display: block;
+					opacity: 0;
+
+					@media screen and (max-width: $medium) {
+						margin-top: -6px;
+					}
+					@media screen and (max-width: $small) {
+						margin-top: -3px;
+					}
+				}
+			}
+        }
+        a {
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: $gold;
+            letter-spacing: 1px;
+			transition: .3s ease;
+			margin-left: -50px;
+			opacity: 0;
+        }
+    }
+    .about {
+        nav {
+            top: auto;
+            bottom: 10.6vh;
+        }
+    }
+}
+@keyframes error-img {
+	0% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes error-link {
+	0% {
+		margin-left: -50px;
+		opacity: 0;
+	}
+	100% {
+		margin-left: 0px;
+		opacity: 1;
+	}
+}

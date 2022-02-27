@@ -1,0 +1,572 @@
+.about-page {
+    h1 {
+        margin-bottom: 40px;
+    }
+    .about, .mobile-nav {
+        nav {
+            display: none;
+        }
+    }
+}
+.about-intro {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: $medium) {
+        margin-bottom: 30px;
+    }
+    p {
+        font-family: $helvetica-neue;
+		line-height: 24px;
+		transform: translateY(100%);
+		opacity: 0;
+        transition: ease;
+        margin: 15px;
+    }
+}
+@keyframes about-intro {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+.check-in {
+    margin: 50px 0px;
+
+    @media screen and (max-width: $medium) {
+        margin: 0px 0px 10px;
+    }
+    &__step {
+        @media screen and (max-width: $small) {
+            margin-bottom: 50px;
+		}
+		&:hover {
+			.check-in__step__icon {
+				img {
+					transform: scale(1.15);
+				}
+			}
+		}
+        &:last-of-type {
+            @media screen and (max-width: $small) {
+                margin-bottom: 0px;
+            }
+        }
+        &__icon {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $small) {
+                height: auto;
+                margin-bottom: 30px;
+			}
+			img {
+				transition: .5s ease;
+			}
+        }
+        &__text {
+            p {
+                font-size: 17px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+.video {
+    @include aspect-ratio(1920, 710);
+
+    @media screen and (max-width: $small) {
+        @include aspect-ratio(414, 710);
+    }
+    &.full-height {
+        @include aspect-ratio(1920, 950);
+
+        @media screen and (max-width: $small) {
+            @include aspect-ratio(414, 710);
+        }
+    }
+    &__poster {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+		width: 100%;
+		overflow: hidden;
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+        img {
+			width: 100%;
+			transition: .8s ease;
+        }
+        #play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: $white;
+            border: none;
+            color: $black;
+            text-transform: lowercase;
+            font-family: $avenir;
+            font-weight: bold;
+            letter-spacing: -.5px;
+            outline: none;
+            padding-bottom: 5px;
+            transition: .1s ease-out;
+
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+    &__video {
+        height: 100%;
+        text-align: center;
+        background-color: $black;
+
+        video {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            object-fit: cover;
+        }
+    }
+    h1 {
+        color: $white;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+        font-size: 4.4vw;
+        line-height: 4.2vw;
+		margin-bottom: 5vw;
+		opacity: 0;
+		margin-left: -50px;
+		transition: ease;
+
+        @media screen and (max-width: $medium) {
+            font-size: 5vw;
+            line-height: 4.8vw;
+        }
+        @media screen and (max-width: $small) {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 350px) {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+.training-hero {
+	position: relative;
+
+	&__img {
+		overflow: hidden;
+		
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+        img {
+			width: 100%;
+			transition: .8s ease;
+        }
+	}
+    h1 {
+        color: $white;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+        font-size: 4.4vw;
+        line-height: 4.2vw;
+		margin-bottom: 5vw;
+		opacity: 0;
+		margin-left: -50px;
+		transition: ease;
+
+        @media screen and (max-width: $medium) {
+            font-size: 5vw;
+            line-height: 4.8vw;
+        }
+        @media screen and (max-width: $small) {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 350px) {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+@keyframes video-h1 {
+	0% {
+		opacity: 0;
+		margin-left: -50px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0px;
+	}
+}
+.quote {
+    margin-bottom: 100px;
+
+    @media screen and (max-width: $small) {
+        margin-bottom: 80px;
+    }
+    blockquote {
+        font-size: 2.5vw;
+        line-height: 3.1vw;
+        letter-spacing: -1px;
+        max-width: 1070px;
+        width: 100%;
+
+        @media screen and (max-width: $large) {
+            font-size: 3.2vw;
+            line-height: 3.8vw;
+        }
+        @media screen and (max-width: $medium) {
+            font-size: 30px;
+            line-height: 37px;
+        }
+        @media screen and (max-width: $small) {
+            font-size: 26px;
+            line-height: 33px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 25px;
+            background-image: url('../img/quote.svg');
+            background-repeat: no-repeat;
+            margin-bottom: 40px;
+
+            @media screen and (max-width: $small) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__attribution {
+        float: right;
+        margin-top: 10px;
+    }
+}
+.questions {
+    h2 {
+        border-top: 1px solid $black;
+        padding: 70px 0px 35px;
+        margin-bottom: 0px;
+        font-size: 36px;
+        font-weight: normal;
+        line-height: 49px;
+        letter-spacing: -1px;
+
+        @media screen and (max-width: $small) {
+            padding: 40px 0px 25px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+        br {
+            @media screen and (max-width: $large) {
+                display: none;
+            }
+        }
+    }
+    &__number {
+        padding-top: 35px;
+
+        @media screen and (max-width: $small) {
+            padding-top: 15px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 25px;
+        }
+    }
+    &__answer {
+        padding-top: 35px;
+
+        @media screen and (max-width: $small) {
+            padding-top: 15px;
+        }
+        &:last-of-type {
+            p {
+                &:last-of-type {
+                    border-bottom: none;
+                    padding-bottom: 0px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+
+            &:last-of-type {
+                border-bottom: 1px solid $black;
+                padding-bottom: 45px;
+
+                @media screen and (max-width: $small) {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+.events-images {
+    .col-md-8 {
+        padding-right: 15px;
+
+        @media screen and (max-width: $medium) {
+            padding: 0px 30px 0px 0px;
+        }
+    }
+    .col-md-4 {
+        display: flex;
+        align-items: flex-end;
+        padding-left: 15px;
+
+        @media screen and (max-width: $medium) {
+            padding: 0px;
+            margin-top: -200px;
+        }
+        @media screen and (max-width: $small) {
+            margin-top: -100px;
+        }
+    }
+    &__img-1 {
+        display: flex;
+		justify-content: flex-end;
+		overflow: hidden;
+
+        @media screen and (max-width: $medium) {
+            display: block;
+            margin-left: -5%;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+        img {
+			max-width: 756px;
+			width: 100%;
+			transition: .8s ease;
+        }
+    }
+    &__img-2 {
+        position: relative;
+        width: 100%;
+		height: 100%;
+
+        @media screen and (max-width: $medium) {
+            display: flex;
+            justify-content: flex-end;
+            right: -20%;
+        }
+        @media screen and (max-width: $small) {
+            width: 80%;
+            right: -40%;
+		}
+		&:hover {
+			img {
+				transform: scale(1.15);
+			}
+		}
+		> div {
+			overflow: hidden;
+			max-width: 100%;
+            position: absolute;
+			bottom: -25%;
+
+			@media screen and (max-width: $medium) {
+                position: relative;
+                bottom: auto;
+            }
+		}
+        img {
+			transition: .8s ease;
+        }
+    }
+    &__img-3 {
+        max-width: 268px;
+        width: 40%;
+		margin-left: 30px;
+		overflow: hidden;
+
+        @media screen and (max-width: $medium) {
+            order: 1;
+            width: 60%;
+            margin-left: 0px;
+		}
+		&:hover {
+			img {
+				transform: scale(1.15);
+			}
+		}
+        img {
+			max-width: 100%;
+			transition: .8s ease;
+        }
+    }
+    &__heading-img {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @media screen and (max-width: $medium) {
+            padding: 0px 30px !important;
+            flex-wrap: wrap;
+            margin-top: -170px;
+        }
+        @media screen and (max-width: $small) {
+            margin-top: -100px;
+        }
+    }
+    &__heading {
+        display: flex;
+        align-items: center;
+        width: 60%;
+
+        @media screen and (max-width: $medium) {
+            order: 2;
+            width: 100%;
+        }
+        h2 {
+            font-size: 2.5vw;
+            line-height: 2.9vw;
+            letter-spacing: -1px;
+            margin-bottom: 0px;
+
+            @media screen and (max-width: $medium) {
+                margin-top: 50px;
+                font-size: 36px;
+                line-height: 50px;
+            }
+            @media screen and (max-width: $medium) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            br {
+                @media screen and (max-width: $medium) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.events-text {
+    margin-top: 100px;
+    margin-bottom: -20px;
+
+    @media screen and (max-width: $medium) {
+        margin-top: 25px;
+        margin-bottom: -10px;
+    }
+    p {
+        color: $light-gray;
+        line-height: 23px;
+    }
+}
+.caps-offset {
+    margin-top: -175px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 7.8vw;
+    line-height: 7.6vw;
+    letter-spacing: -.6vw;
+    transition: .5s ease-in-out;
+
+    @media screen and (max-width: $medium) {
+        font-size: 70px;
+        line-height: 70px;
+        margin-top: -90px;
+        margin-bottom: 50px;
+    }
+    @media screen and (max-width: 350px) {
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: -80px;
+    }
+}
+.training-blocks {
+    &__block {
+        margin-bottom: 50px;
+
+        @media screen and (max-width: $medium) {
+            max-width: 558px;
+            margin: 0px auto 50px;
+        }
+        &:last-of-type, &:nth-last-child(2) {
+            margin-bottom: 0px;
+        }
+        &:nth-last-child(2) {
+            @media screen and (max-width: $medium) {
+                margin-bottom: 50px;
+            }
+        }
+        &__img {
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                transform: scale(1);
+                transition: .8s ease;
+            }
+        }
+        hr {
+            margin: 40px 0px 25px;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                p {
+                    color: $gold;
+                }
+                .training-blocks__block__img {
+                    img {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+        p {
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -1px;
+            margin-bottom: 0px;
+            transition: .3s ease-in-out;
+        }
+    }
+	&__btn {
+		margin-top: 20px;
+	}
+}

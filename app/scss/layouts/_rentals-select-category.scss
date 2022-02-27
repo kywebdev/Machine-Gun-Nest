@@ -1,0 +1,338 @@
+.select-category {
+    //display: none;
+}
+.gun-category-slider-container {
+    min-height: calc(100vh - (210px + 13.5vh));
+    padding-top: 20vh;
+
+    @media screen and (max-height: 650px) {
+        padding-top: 5vh;
+    }
+    @media screen and (max-width: $medium) {
+		padding-top: 0px;
+		min-height: auto;
+    }
+}
+.handguns {
+	.gun-category-slider {
+		transform: translateX(260%);
+
+		@media screen and (max-width: $medium) {
+			transform: translateX(0%);
+			transform: translateY(-260%);
+		}
+	}
+}
+.longguns {
+	.gun-category-slider {
+		transform: translateX(210%);
+
+		@media screen and (max-width: $medium) {
+			transform: translateX(0%);
+			transform: translateY(-210%);
+		}
+	}
+}
+.gun-category-slider {
+	transform: translateX(200%);
+
+	@media screen and (max-width: $medium) {
+		transform: translateX(0%);
+		transform: translateY(-200%);
+	}
+    .slick-list {
+		padding: 0px 27% !important;
+		overflow: visible;
+
+        @media screen and (max-width: $medium) {
+			padding: 150px 0% !important;
+			overflow: hidden;
+			height: 352px !important;
+        }
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: none;
+        background-color: transparent;
+        border: none;
+        opacity: .28;
+        transition: .2s ease-in-out;
+        z-index: 1;
+        width: 27%;
+        height: 100%;
+        padding: 0px;
+
+        &:hover {
+            opacity: 1;
+        }
+        img {
+            margin-top: -75px;
+
+            @media screen and (max-width: $medium) {
+                margin-top: 0px;
+                transform: rotate(90deg);
+                position: absolute;
+            }
+        }
+    }
+    .slick-prev {
+        left: 0px;
+        text-align: right;
+
+        @media screen and (max-width: $medium) {
+            left: 50%;
+            text-align: left;
+            top: 0px;
+            width: 100%;
+            transform: translateX(-50%);
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        img {
+            @media screen and (max-width: $medium) {
+                bottom: 0px;
+            }
+        }
+    }
+    .slick-next {
+        right: 0px;
+        text-align: left;
+
+        @media screen and (max-width: $medium) {
+            left: 50%;
+            text-align: left;
+            top: auto;
+            bottom: 0px;
+            width: 100%;
+            transform: translateX(-50%);
+            height: 105px;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            @media screen and (max-width: $medium) {
+                top: 0px;
+            }
+        }
+    }
+    .slick-slide {
+        text-align: center;
+    }
+    a {
+        color: #101010;
+        text-shadow: 3px 0 0 $white, -3px 0 0 $white, 0 3px 0 $white, 0 -3px 0 $white, 2px 2px $white, -2px -2px 0 $white, 2px -2px 0 $white, -2px 2px 0 $white;
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        
+        @media screen and (max-width: $large) {
+            text-shadow: 2px 0 0 $white, -2px 0 0 $white, 0 2px 0 $white, 0 -2px 0 $white, 1px 1px $white, -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white;
+        }
+        h1 {
+            opacity: .28;
+        }
+    }
+    .slick-current {
+        a {
+            color: $gold;
+            text-shadow: none;
+            
+            h1 {
+                opacity: 1;
+            }
+        }
+        .gun-icon {
+            &__initial {
+                opacity: 0;
+            }
+            &__active {
+                opacity: 1;
+            }
+        }
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $gilroy;
+        font-size: 6.7vw;
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+        transition: .3s ease-in-out;
+
+        @media screen and (max-width: $medium) {
+            margin-bottom: 100px;
+            font-size: 50px;
+        }
+    }
+    .gun-icon {
+        width: 55px;
+        height: 55px;
+        position: relative;
+
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        &__initial {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: .3s ease-in-out;
+        }
+        &__active {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+@keyframes gun-category-slider {
+	0% {
+		transform: translateX(200%);
+	}
+	50% {
+		transform: translateX(-20%);
+	}
+	70% {
+		transform: translateX(20%);
+	}
+	90% {
+		transform: translateX(-5%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes gun-category-slider-mobile {
+	0% {
+		transform: translateY(-200%);
+	}
+	50% {
+		transform: translateY(20%);
+	}
+	70% {
+		transform: translateY(-20%);
+	}
+	90% {
+		transform: translateY(5%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+.gun-category-info-slider {
+	width: 100%;
+	position: relative;
+	opacity: 0;
+	top: 20px;
+
+    @media screen and (max-width: $medium) {
+        margin-top: 100px;
+    }
+    .slick-slide {
+        outline: none;
+    }
+    .rental-fees {
+        p {
+            font-family: $helvetica-neue;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    .gun-types {
+        opacity: .3;
+        font-family: $helvetica-neue;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .discover {
+        a {
+            color: $gold;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            &:hover, &:focus {
+                outline: none;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.discover-mobile {
+	color: $gold;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	top: -70px;
+	display: none;
+
+	@media screen and (max-width: $medium) {
+		top: 0px;
+		margin-top: 40px;
+	}
+}
+@media (hover: none) {
+	#discover {
+		display: none;
+	}
+	.discover-mobile {
+		display: block;
+	}
+}
+@keyframes gun-category-info-slider {
+	0% {
+		opacity: 0;
+		top: 20px;
+	}
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+.all-guns {
+    display: none;
+}
+.rentals {
+    .all-guns, .search {
+        display: inline-block;
+    }
+    .about {
+        position: relative;
+        z-index: 1;
+    }
+}
+.search-results {
+	.all-guns, .search {
+        display: inline-block;
+	}
+	.all-guns {
+		@media screen and (max-width: $medium) {
+			display: none;
+		}
+	}
+}
+.all-guns-mobile {
+    @media screen and (max-width: $medium) {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}

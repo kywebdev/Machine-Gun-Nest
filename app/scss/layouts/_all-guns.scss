@@ -1,0 +1,320 @@
+.all-guns__grid-view {    
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .mix {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+}
+.all-guns__list-view {
+    display: none;
+    overflow: hidden;
+
+    .list-of-guns {
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: $white;
+            text-decoration: none;
+            opacity: .58;
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+.list-controls {
+    margin-bottom: 50px;
+    display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+    @media screen and (max-width: $small) {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
+    .filter-controls {
+        width: calc(100% - 54px);
+
+        @media screen and (max-width: $small) {
+            width: 100%;
+        }
+        .dropdown {
+            display: inline-block;
+			margin-right: 5%;
+        
+			&:nth-child(2) {
+				.dropdown-menu {
+					columns: 2;
+				}
+			}
+            .dropdown-toggle {
+                font-family: $avenir;
+                font-size: 11px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                position: relative;
+                cursor: pointer;
+                padding-left: 0px;
+                padding-right: 15px;
+                display: block;
+                color: $white;
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                outline: none;
+				transition: .1s ease-in-out;
+				top: 30px;
+				opacity: 0;
+        
+                &:hover {
+                    color: $gold;
+                }
+                &:after {
+                    content: '';
+                    width: 7px;
+                    height: 4px;
+                    background-image: url('../img/dropdown-arrow-white.svg');
+                    background-repeat: no-repeat;
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    right: 0px;
+                    border: none;
+                }
+            }
+            .dropdown-menu {
+                background-color: #1d1d1d;
+                border-top: 1px solid #3F3F3F;
+                border-left: 1px solid #161616;
+                border-right: 1px solid #161616;
+                border-bottom: 1px solid #1b1b1b;
+                min-width: 90px;
+                margin: .35rem 0px;
+                border-radius: 0px;
+                left: -5px !important;
+            }
+            .dropdown-item {
+                font-family: $avenir;
+                font-size: 11px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                opacity: .64;
+                color: $white;
+                padding: .25rem .75rem;
+                transition: .1s ease-in-out;
+                outline: none;
+        
+                &:hover {
+                    color: $light-gray;
+                    background-color: transparent;
+                }
+                &:focus {
+                    background-color: transparent;
+                }
+                &.mixitup-control-active {
+                    color: $gold;
+                }
+            }
+        }
+        .reset-filters {
+            font-family: $avenir;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            cursor: pointer;
+            padding-right: 15px;
+            display: inline-block;
+            color: $white;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+			outline: none;
+			top: 30px;
+			opacity: 0;
+
+            &:hover {
+                color: $gold;
+            }
+		}
+    }
+    .display-types {
+        width: 54px;
+        margin-top: -4px;
+
+        @media screen and (max-width: $small) {
+            width: 100%;
+            border-bottom: 1px solid #979797;
+            padding: 15px 0px;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+        &__grid {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            display: inline-block;
+			cursor: pointer;
+			transform: scale(1.5);
+			opacity: 0;
+
+            @media screen and (max-width: $small) {
+                width: 23px;
+                margin-right: 15px;
+            }
+            &.is-visible {
+                .active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &.is-hidden {
+                .active {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: .3s ease-in-out;
+
+                @media screen and (max-width: $small) {
+                    width: 100%;
+                }
+                &.active {
+                    z-index: 2;
+                }
+                &.inactive {
+                    z-index: 1;
+                }
+            }
+        }
+        &__list {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            display: inline-block;
+			cursor: pointer;
+			transform: scale(1.5);
+			opacity: 0;
+
+            &.is-visible {
+                .active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &.is-hidden {
+                .active {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: .3s ease-in-out;
+
+                @media screen and (max-width: $small) {
+                    width: 100%;
+                }
+                &.active {
+                    z-index: 2;
+                }
+                &.inactive {
+                    z-index: 1;
+                }
+            }
+        }
+	}
+	hr {
+		border: none;
+		background-color: #979797;
+		width: 0%;
+		opacity: 0;
+		margin: 25px 0px 0px;
+	}
+}
+@keyframes all-guns-hr {
+	0% {
+		width: 0%;
+		opacity: 0;
+	}
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+@keyframes dropdown-toggle {
+	0% {
+		top: 30px;
+		opacity: 0;
+	}
+	100% {
+		top: 0px;
+		opacity: .64;
+	}
+}
+@keyframes display-types {
+	0% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+.all-guns__text {
+    line-height: 22px;
+    font-weight: 500;
+    margin-top: 40px;
+
+    @media screen and (max-width: $medium) {
+        margin-top: 10px;
+    }
+    @media screen and (max-width: $small) {
+        margin-top: -10px;
+    }
+}
+.filter-fail-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out;;
+}
+.mixitup-container-failed {
+    + .filter-fail-text {
+        opacity: .5;
+        visibility: visible;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: $small) {
+            margin-bottom: 60px;
+        }
+    }
+}

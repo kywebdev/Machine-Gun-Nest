@@ -1,0 +1,341 @@
+.navigation {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9998;
+    width: 100%;
+    transition: 1s ease-in-out;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(100%);
+    max-height: 100vh;
+    min-height: 100vh;
+
+    .row {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        max-height: 100vh;
+        min-height: 100vh;
+
+        .fullscreen-height {
+            height: 100%;
+        }
+    }
+    .nav-area {
+		padding-bottom: 80px;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: 1s ease-in-out;
+		
+		@media screen and (max-width: $medium) {
+			transform: scaleX(1);
+		}
+        .page-wrapper {
+            width: 87%;
+
+            @media screen and (max-width: $medium) {
+                width: 90%;
+            }
+        }
+        .main-nav-wrapper {
+            width: 50%;
+            max-width: 600px;
+            margin: 0px auto;
+
+            @media screen and (max-width: $large) {
+                width: 80%;
+            }
+            @media screen and (max-width: $medium) {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .main-nav {
+            margin-top: 110px;
+
+            @media screen and (max-width: $large) {
+                margin-top: 150px;
+            }
+            @media screen and (max-width: $medium) {
+                margin-top: 110px;
+            }
+            ul {
+                li {
+                    display: block;
+                    margin-top: 0px;
+					margin-right: 0px;
+					opacity: 0;
+					visibility: hidden;
+
+
+                    a {
+						font-size: 18px;
+						opacity: 1;
+                        font-weight: normal;
+                        width: 100%;
+                        display: block;
+                        padding: 25px 0px;
+						letter-spacing: 0px;
+						position: relative;
+						
+                        &:hover {
+                            color: $gold;
+						}
+						&:after {
+							content: '';
+							display: block;
+							width: 0%;
+							height: 1px;
+							background-color: $white;
+							position: absolute;
+							bottom: 0px;
+							opacity: 0;
+						}
+                    }
+                    ul {
+                        li {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 30px;
+
+                            @media screen and (max-width: $small) {
+                                margin-right: 20px;
+                            }
+                            a {
+                                font-size: 12px;
+                                opacity: .6;
+                                border-bottom: none;
+                                line-height: 18px;
+                                padding-bottom: 0px;
+
+                                &:hover {
+                                    color: $white;
+                                    opacity: 1;
+								}
+								&:after {
+									display: none;
+								}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sub-nav {
+			margin-top: 35px;
+			opacity: 0;
+			visibility: hidden;
+
+			@media screen and (max-width: $medium) {
+				padding-bottom: 80px;
+			}
+            ul {
+                li {
+                    a {
+                        font-size: 18px;
+                        opacity: 1;
+                        font-weight: normal;
+                        letter-spacing: 0px;
+
+                        &:hover {
+                            color: $gold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-area {
+        background-color: #1C1C1C;
+        padding: 50px 5% 9%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        position: relative;
+
+        @media screen and (max-width: $large) {
+            padding: 50px 8% 9%;
+        }
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+        .contact-area-wrapper {
+            max-width: 300px;
+            width: 100%;
+            margin: 0px auto;
+        }
+        .about-contact {
+			margin-bottom: 10vh;
+			opacity: 0;
+			visibility: hidden;
+
+            p {
+                margin-bottom: 25px;
+                line-height: 22px;
+                color: $white;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+        .social {
+            ul {
+                margin: 0px;
+                text-align: center;
+
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+					margin-right: 5px;
+					opacity: 0;
+					visibility: hidden;
+
+                    &:last-of-type {
+                        margin-right: 0px;
+                    }
+                    a {
+                        &:hover {
+                            img {
+                                opacity: .7;
+                            }
+                        }
+                        img {
+                            width: 18px;
+                            transition: .2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-mgn {
+            position: absolute;
+            bottom: 15%;
+			left: -45px;
+			transform: scale(0);
+
+            .contact-btn {
+                background-color: $gold;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                display: block;
+                position: relative;
+                transform: perspective(1px) translateZ(0) scale(1);
+                overflow: hidden;
+                transition: .1s ease-out;
+
+                &:hover {
+                    transform: perspective(1px) translateZ(0) scale(1.1);
+
+                    &:before {
+                        transform: scale(2);
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: darken($gold, 5%);
+                    border-radius: 100%;
+                    transform: scale(0);
+                    transition-property: transform;
+                    transition-duration: 0.4s;
+                    transition-timing-function: ease-out;
+                }
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+					visibility: hidden;
+                }
+            }
+        }
+    }
+}
+@keyframes nav-item {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes nav-item-line {
+	0% {
+		width: 0%;
+		opacity: 0;
+	}
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+@keyframes contact-btn {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes nav-animate-out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+@keyframes nav-btn-animate-out {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+.nav-open {
+    .navigation {
+		transform: translateX(0%);
+		
+		.nav-area {
+			transform: scaleX(1);
+
+			@media screen and (max-width: $medium) {
+				transform: none;
+			}
+		}
+	}
+    header {
+        .col-md-8 {
+            nav {
+                opacity: 0;
+                visibility: hidden;
+            }
+		}
+		.search {
+			opacity: 0;
+            visibility: hidden;
+		}
+    }
+}

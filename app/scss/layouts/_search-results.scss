@@ -1,0 +1,119 @@
+.results-found {
+	padding-bottom: 30px;
+	margin-top: 50px;
+	opacity: 0;
+	transition: ease;
+
+    p {
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: .64;
+        margin-bottom: 0px;
+    }
+}
+@keyframes results-found {
+	0% {
+		margin-top: 50px;
+		opacity: 0;
+	}
+	100% {
+		margin-top: 0px;
+		opacity: 1;
+	}
+}
+.results-section {
+    border-top: 1px solid rgba(151, 151, 151, .6);
+
+    h3 {
+        margin: 0px;
+        padding: 30px 0px;
+        font-size: 36px;
+        line-height: 52px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+
+        @media screen and (max-width: $small) {
+            font-size: 30px;
+            padding: 20px 0px;
+        }
+    }
+    .search-result {
+        border-top: 1px solid  rgba(151, 151, 151, .6);
+        display: flex;
+        padding: 40px 0px;
+
+        &__img {
+			width: 147px;
+			overflow: hidden;
+
+            @media screen and (max-width: $small) {
+                display: none;
+			}
+			&:hover {
+				img {
+					transform: scale(1.15);
+				}
+			}
+			img {
+				transition: .5s ease;
+			}
+        }
+        &__text {
+            width: calc(100% - 147px);
+            padding-left: 5%;
+
+            @media screen and (max-width: $small) {
+                width: 100%;
+                padding-left: 0%;
+            }
+            &__heading {
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+                h4 {
+                    font-size: 18px;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    margin-bottom: 25px;
+                }
+                .result-num {
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-left: 20px;
+                    margin-bottom: 25px;
+                }
+            }
+            &__snippet {
+                p {
+                    line-height: 22px;
+                    color: #CACACA;
+                }
+                a {
+                    font-size: 18px;
+                    color: $white;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.align-center {
+    text-align: center;
+}
+.underline {
+    text-decoration: underline;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.text-muted {
+    color: $white !important;
+    opacity: .46;
+}
+.gray-text {
+    font-size: 14px;
+    line-height: 18px;
+	opacity: .46;
+	
+	p {
+		color: $white !important;
+	}
+}
