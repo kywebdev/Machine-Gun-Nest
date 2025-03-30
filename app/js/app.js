@@ -1,3 +1,5 @@
+
+
 $(window).on('load', function() {
 
 	// disable scrolling while the preloader is showing
@@ -314,6 +316,9 @@ $(document).ready(function() {
     // toggle the 360 button on or off
     $('.rotate-btn').on('click', function() {
         $(this).toggleClass('is-on is-off');
+    });
+    $('.gun-model-close').on('click', function() {
+        $('.rotate-btn').toggleClass('is-on is-off');
     });
 
     // generate tooltips

@@ -12021,6 +12021,59 @@ nav ul li {
   .marker-tooltip-container {
     display: none; } }
 
+.gun-model-overlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99999999;
+  background-color: #212121;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center; }
+  .gun-model-overlay .page-wrapper {
+    height: calc(100% - 250px); }
+  .gun-model-overlay #gun-model {
+    height: 100%;
+    width: 100%;
+    margin: 50px 0px 200px;
+    background-color: #2d2d2d; }
+  .gun-model-overlay p {
+    color: #ffffff;
+    margin-bottom: 30px; }
+  .gun-model-overlay .controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; }
+    .gun-model-overlay .controls .btn, .gun-model-overlay .controls .gform_footer input, .gform_footer .gun-model-overlay .controls input {
+      padding: 15px 20px;
+      margin: 0px 10px;
+      width: auto !important; }
+    .gun-model-overlay .controls .zoom-in, .gun-model-overlay .controls .zoom-out {
+      font-size: 18px;
+      padding: 10px 20px; }
+  .gun-model-overlay .gun-model-close {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    outline: none; }
+    .gun-model-overlay .gun-model-close img {
+      transform: scale(1);
+      transition: .1s ease-in-out; }
+    .gun-model-overlay .gun-model-close:hover img {
+      transform: scale(0.8); }
+
+canvas {
+  display: block;
+  outline: none; }
+
 .all-guns__grid-view .row {
   margin-right: -15px;
   margin-left: -15px; }

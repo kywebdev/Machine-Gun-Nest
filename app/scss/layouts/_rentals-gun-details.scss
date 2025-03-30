@@ -751,3 +751,70 @@
 		display: none;
 	}
 }
+.gun-model-overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999999;
+    background-color: $dark-gray;
+    overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+
+    .page-wrapper {
+        height: calc(100% - 250px);
+    }
+	#gun-model {
+		height: 100%;
+		width: 100%;
+		margin: 50px 0px 200px;
+		background-color: #2d2d2d;
+	}
+	p {
+		color: $white;
+		margin-bottom: 30px;
+	}
+	.controls {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+
+		.btn {
+			padding: 15px 20px;
+			margin: 0px 10px;
+			width: auto !important;
+		}
+		.zoom-in, .zoom-out {
+			font-size: 18px;
+			padding: 10px 20px;
+		}
+	}
+	.gun-model-close {
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		padding: 10px;
+		outline: none;
+
+		img {
+			transform: scale(1);
+    		transition: .1s ease-in-out;
+		}
+		&:hover {
+			img {
+				transform: scale(0.8);
+			}
+		}
+	}
+}
+canvas {
+	display: block;
+	outline: none;
+}
